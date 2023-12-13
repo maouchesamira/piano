@@ -6,6 +6,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Lessons from "./Lessons";
 import Professeurs from "./Professeurs";
 import Footer from "../components/Footer";
+import Ecole from "./Ecole";
 
 
 export default function Home() {
@@ -14,26 +15,30 @@ export default function Home() {
             <Card sx={{ borderRadius: "0" }}>
                 <div style={{ position: "relative" }}>
                     <CardMedia
-                        sx={{ height: "540px", width: '100%', opacity: '0.90' }}
+                        sx={{ height: "550px", width: '100%', opacity: '0.90' }}
                         component="img"
                         image={"./img/main.jpg"}
                         alt="Pianiste" />
-                    <div
+                    <Box
                         style={{
                             position: "absolute",
                             color: "white",
-                            marginTop: "7%",
+                            marginTop: "6%",
+                            padding: '1%',
                             top: 5, left: "50%",
                             transform: "translateX(-50%)",
+                            width: "60%"
                         }}>
                         <Box sx={{
+                            padding: '2%',
                             opacity: '0.7',
                             backgroundColor: 'black',
-                            padding: '5%'
+                            margin: '2 %',
                         }}>
                             <Typography
                                 variant="h6"
                                 m="4%"
+                                pt='2%'
                                 letterSpacing=".3rem"
                                 fontFamily="italic"
                                 textAlign="center"
@@ -56,20 +61,25 @@ export default function Home() {
                                 textAlign="center"
                             >
                                 Nous l'enseignant avec passion </Typography>
-                            <Typography variant="subtitle1" mb="6%" letterSpacing=".2rem">
+                            <Typography
+                                variant="subtitle1"
+                                mb="6%" letterSpacing=".2rem"
+                                textAlign="center"
+                            >
                                 Vous pouvez compter sur nous pour vous transmettre un élan de joie à chaque vibration.
                             </Typography>
                             <Stack>
                                 <Button>
-                                    < Link component={RouterLink} to='/lessons' >
+                                    < Link component={RouterLink} to='/Ecole' >
                                         <KeyboardArrowDownIcon fontSize="large" sx={{ color: "yellow" }} />
                                     </Link>
                                 </Button>
                             </Stack>
                         </Box>
-                    </div>
+                    </Box>
                 </div>
             </Card >
+            <Ecole />
             <Lessons />
             <Professeurs />
             <Footer />

@@ -52,6 +52,9 @@ const Navbar = () => {
                                     fontSize='small' /> */}
                                 Accueil
                             </Link>
+                            <Link component={RouterLink} to='/Ecole' underline='none' color="black" fontFamily='italic' onClick={() => setIsDrawerOpen(false)}>
+                                A propos de nous
+                            </Link>
                             <Link component={RouterLink} to='/Lessons' underline='none' color="black" fontFamily='italic' onClick={() => setIsDrawerOpen(false)}>
                                 Lessons
                             </Link>

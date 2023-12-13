@@ -4,6 +4,7 @@ import Professeurs from './containers/Professeurs';
 import Lessons from './containers/Lessons';
 import Contact from './containers/Contact';
 import Navbar from './components/Navbar';
+import Ecole from './containers/Ecole'
 import { createTheme, ThemeProvider } from '@mui/material';
 import './index.css';
 
@@ -27,6 +28,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}></Route>
+          <Route path='/Ecole' element={<Ecole />}></Route>
           <Route path='/Lessons' element={<Lessons />}></Route>
           <Route path='/Professeurs' element={<Professeurs />}></Route>
           <Route path='/contact' element={<Contact />}></Route>
